@@ -2,4 +2,4 @@
 *.log
 
 # ignore .vdcode
-.vscode
+/.vscode/
