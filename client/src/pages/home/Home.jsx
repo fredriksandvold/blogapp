@@ -13,7 +13,6 @@ export default function Home() {
 
   const axiosInstance = axios.create ({
     baseURL: process.env.REACT_APP_API_URL,
-
   }); 
 
   useEffect(() => {
