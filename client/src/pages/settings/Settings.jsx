@@ -14,8 +14,13 @@ export default function Settings() {
   const { user, dispatch } = useContext(Context);
   //console.log(dispatch); 
 
-  const PF = "http://localhost:5001/images/"
+  const axiosInstance = axios.create ({
+    baseURL: process.env.REACT_APP_API_URL,
+  }); 
+  
+  const PF = process.env.REACT_APP_API_URL+"images";
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
@@ -32,11 +37,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("/upload", data);
+        await axiosInstance.post("/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axiosInstance.put("/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

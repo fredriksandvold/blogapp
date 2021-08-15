@@ -10,9 +10,15 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
 
+
+  const axiosInstance = axios.create ({
+    baseURL: process.env.REACT_APP_API_URL,
+
+  }); 
+
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts" + search);
+      const res = await axiosInstance.get("/posts" + search);
       //console.log(res)
   
       setPosts(res.data);

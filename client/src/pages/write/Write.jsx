@@ -10,6 +10,14 @@ export default function Write() {
   const { user } = useContext(Context);
 
   const handleSubmit = async (e) => {
+
+
+  const axiosInstance = axios.create ({
+    baseURL: process.env.REACT_APP_API_URL,
+  }); 
+
+
+
     e.preventDefault();
     const newPost = {
       username: user.username,
@@ -23,7 +31,7 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/upload", data);
+        await axiosInstance.post("/upload", data);
       } catch (err) {      
         
         // error to browser
@@ -32,7 +40,7 @@ export default function Write() {
       
     }
     try {
-      const res = await axios.post("/posts", newPost);
+      const res = await axiosInstance.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);
 
     } catch (err) {

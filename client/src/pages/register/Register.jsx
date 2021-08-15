@@ -12,10 +12,15 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
+
+  const axiosInstance = axios.create ({
+    baseURL: process.env.REACT_APP_API_URL,
+  }); 
+
     try {
 
       //handle if user not exists 
-      const res = await axios.post("/auth/register", {
+      const res = await axiosInstance.post("/auth/register", {
         username,
         email,
         password,
