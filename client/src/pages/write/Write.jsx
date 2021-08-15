@@ -24,12 +24,20 @@ export default function Write() {
       newPost.photo = filename;
       try {
         await axios.post("/upload", data);
-      } catch (err) {}
+      } catch (err) {      
+        
+        // error to browser
+      }
+
+      
     }
     try {
       const res = await axios.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);
-    } catch (err) {}
+
+    } catch (err) {
+      
+    }
   };
   return (
     <div className="write">

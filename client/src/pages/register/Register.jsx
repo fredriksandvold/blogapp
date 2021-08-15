@@ -13,6 +13,8 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
+
+      //handle if user not exists 
       const res = await axios.post("/auth/register", {
         username,
         email,

@@ -73,18 +73,25 @@ router.get("/", async (req, res) => {
   const catName = req.query.cat;
   try {
     let posts;
+    let reversedPosts; 
     if (username) {
       posts = await Post.find({ username });
+      reversedPosts = posts.reverse(); 
+
     } else if (catName) {
       posts = await Post.find({
         categories: {
           $in: [catName],
         },
-      });
+      }
+      );
+      reversedPosts = posts.reverse(); 
+
     } else {
       posts = await Post.find();
+      reversedPosts = posts.reverse(); 
     }
-    res.status(200).json(posts);
+    res.status(200).json(reversedPosts);
   } catch (err) {
     res.status(500).json(err);
   }

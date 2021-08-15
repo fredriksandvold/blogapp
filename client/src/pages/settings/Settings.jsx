@@ -12,7 +12,9 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/"
+  //console.log(dispatch); 
+
+  const PF = "http://localhost:5001/images/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,6 +72,7 @@ export default function Settings() {
             type="text"
             placeholder={user.username}
             onChange={(e) => setUsername(e.target.value)}
+
           />
           <label>Email</label>
           <input

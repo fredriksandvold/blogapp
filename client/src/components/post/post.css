@@ -1,6 +1,11 @@
 .post {
-  width: 385px;
-  margin: 0px 25px 40px 25px;
+  width: 75%;
+  margin: 0px 25px 25px 25px;
+  background-color: #fdfbfb;
+  padding: 20px;
+  border-bottom: 1px;
+  border-bottom-style:solid;
+  
 }
 
 .postImg {
