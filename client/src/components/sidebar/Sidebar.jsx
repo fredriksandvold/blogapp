@@ -6,9 +6,16 @@ import "./sidebar.css";
 export default function Sidebar() {
   const [cats, setCats] = useState([]);
 
+  const axiosInstance = axios.create ({
+    baseURL: process.env.REACT_APP_API_URL,
+  });  
+
+
   useEffect(() => {
+
+
     const getCats = async () => {
-      const res = await axios.get("/categories");
+      const res = await axiosInstance.get("/categories");
       setCats(res.data);
     };
     getCats();

@@ -9,13 +9,11 @@ export default function Write() {
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
 
-  const handleSubmit = async (e) => {
-
-
   const axiosInstance = axios.create ({
     baseURL: process.env.REACT_APP_API_URL,
   }); 
 
+  const handleSubmit = async (e) => {
 
 
     e.preventDefault();
