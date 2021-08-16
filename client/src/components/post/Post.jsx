@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Post({ post }) {
   const URL = process.env.REACT_APP_API_URL; 
-  const PF = {URL}+"images";
+  const PF = {URL}+"/images/";
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
