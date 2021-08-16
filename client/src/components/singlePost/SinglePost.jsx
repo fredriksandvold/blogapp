@@ -12,10 +12,9 @@ export default function SinglePost() {
 
   const axiosInstance = axios.create ({
     baseURL: process.env.REACT_APP_API_URL,
-
   });   
   
-  const PF = process.env.REACT_APP_API_URL+"images";
+  const PF = process.env.REACT_APP_API_URL+"/images";
 
 
   const { user } = useContext(Context);
