@@ -14,7 +14,7 @@ export default function Settings() {
   const { user, dispatch } = useContext(Context);
   //console.log(dispatch); 
 
-  const PF = "http://localhost:5001/images/"
+  const PF = "http://localhost:4040/images/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();

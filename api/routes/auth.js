@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const db = require("mongoose"); 
-/*
+
 //REGISTER
 router.post("/register", async (req, res) => {
 
@@ -22,7 +22,7 @@ router.post("/register", async (req, res) => {
     res.status(500).json(err);
   }
 });
-*/ 
+
 
 //LOGIN
 router.post("/login", async (req, res) => {
