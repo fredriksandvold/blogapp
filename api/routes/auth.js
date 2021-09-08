@@ -2,11 +2,10 @@ const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const db = require("mongoose"); 
-/*
+
 //REGISTER
 router.post("/register", async (req, res) => {
-
-
+  
   try {
     const salt = await bcrypt.genSalt(10);
     const hashedPass = await bcrypt.hash(req.body.password, salt);
@@ -22,7 +21,7 @@ router.post("/register", async (req, res) => {
     res.status(500).json(err);
   }
 });
-*/ 
+
 
 //LOGIN
 router.post("/login", async (req, res) => {
