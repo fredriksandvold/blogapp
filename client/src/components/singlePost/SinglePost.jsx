@@ -15,7 +15,8 @@ export default function SinglePost() {
     baseURL: process.env.REACT_APP_API_URL,
   });   
   
-  const PF = 'http://localhost:8100/images/';
+
+  const PF = 'http://195.110.58.145/images/' // 'http://localhost:8100/images/'
 
 
   const { user } = useContext(Context);

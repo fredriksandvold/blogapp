@@ -5,3 +5,6 @@
 /.vscode/
 
 .env
+
+build/*
+!build/build.xml
