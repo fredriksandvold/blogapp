@@ -18,7 +18,7 @@ export default function Settings() {
     baseURL: process.env.REACT_APP_API_URL,
   }); 
   
-  const PF = process.env.REACT_APP_API_URL+"/images/";
+  const PF = 'http://localhost:8100/images/';
 
   
   const handleSubmit = async (e) => {

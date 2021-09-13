@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./singlePost.css";
 
+
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
@@ -14,7 +15,7 @@ export default function SinglePost() {
     baseURL: process.env.REACT_APP_API_URL,
   });   
   
-  const PF = process.env.REACT_APP_API_URL+"/images";
+  const PF = 'http://localhost:8100/images/';
 
 
   const { user } = useContext(Context);
@@ -39,6 +40,7 @@ export default function SinglePost() {
       });
       window.location.replace("/");
     } catch (err) {}
+    
   };
 
   const handleUpdate = async () => {
