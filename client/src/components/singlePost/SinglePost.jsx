@@ -1,4 +1,4 @@
-import axios from "axios";
+import axiosInstance from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+  const axios = axiosInstance.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
   
 

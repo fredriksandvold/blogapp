@@ -1,4 +1,4 @@
-import axios from "axios";
+import axiosInstance from "axios";
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
@@ -8,7 +8,7 @@ export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
-  const axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+  const axios = axiosInstance.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axiosInstance from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./register.css";
@@ -8,7 +8,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+  const axios = axiosInstance.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
 
   const handleSubmit = async (e) => {

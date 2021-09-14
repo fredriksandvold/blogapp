@@ -1,11 +1,11 @@
-import axios from "axios";
+import axiosInstance from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
 
 export default function Sidebar() {
   const [cats, setCats] = useState([]);
-  const axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+  const axios = axiosInstance.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
 
   useEffect(() => {

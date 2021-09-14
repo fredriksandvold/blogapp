@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import "./write.css";
-import axios from "axios";
+import axiosInstance from "axios";
 import { Context } from "../../context/Context";
 
 export default function Write() {
@@ -8,7 +8,7 @@ export default function Write() {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
-  const axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+  const axios = axiosInstance.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
 
   const handleSubmit = async (e) => {
