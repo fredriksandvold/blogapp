@@ -8,8 +8,7 @@ export default function Write() {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
-
-  axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+  const axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
 
   const handleSubmit = async (e) => {

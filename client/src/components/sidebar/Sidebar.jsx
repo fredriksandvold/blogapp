@@ -5,8 +5,7 @@ import "./sidebar.css";
 
 export default function Sidebar() {
   const [cats, setCats] = useState([]);
-
-  axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+  const axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
 
   useEffect(() => {

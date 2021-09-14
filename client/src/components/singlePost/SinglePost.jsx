@@ -10,8 +10,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-
-  axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+  const axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
   
 
