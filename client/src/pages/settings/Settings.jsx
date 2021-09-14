@@ -2,7 +2,7 @@ import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
-import axios from "axios";
+import axiosInstance from "axios";
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -13,7 +13,7 @@ export default function Settings() {
 
   const { user, dispatch } = useContext(Context);
   //console.log(dispatch); 
-  
+
   axiosInstance = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
   
