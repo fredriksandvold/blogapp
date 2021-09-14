@@ -11,9 +11,8 @@ export default function SinglePost() {
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
 
-  const axiosInstance = axios.create ({
-    baseURL: process.env.REACT_APP_API_URL,
-  });   
+  axiosInstance = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+
   
 
   const PF = 'http://195.110.58.145/images/' // 'http://localhost:8100/images/'

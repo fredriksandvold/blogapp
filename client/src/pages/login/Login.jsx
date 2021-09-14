@@ -9,9 +9,7 @@ export default function Login() {
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
 
-  const axiosInstance = axios.create ({
-    baseURL: process.env.REACT_APP_API_URL,
-  }); 
+  axiosInstance = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();

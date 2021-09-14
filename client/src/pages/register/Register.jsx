@@ -13,9 +13,8 @@ export default function Register() {
     e.preventDefault();
     setError(false);
 
-  const axiosInstance = axios.create ({
-    baseURL: process.env.REACT_APP_API_URL,
-  }); 
+    axiosInstance = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+
 
     try {
 

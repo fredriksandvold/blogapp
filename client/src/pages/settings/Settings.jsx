@@ -13,10 +13,9 @@ export default function Settings() {
 
   const { user, dispatch } = useContext(Context);
   //console.log(dispatch); 
+  
+  axiosInstance = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
-  const axiosInstance = axios.create ({
-    baseURL: process.env.REACT_APP_API_URL,
-  }); 
   
   const PF = 'http://195.110.58.145/images/' // 'http://localhost:8100/images/'
 
