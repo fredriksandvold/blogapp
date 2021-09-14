@@ -1,4 +1,4 @@
-import axiosInstance from "axios";
+import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./register.css";
@@ -13,13 +13,13 @@ export default function Register() {
     e.preventDefault();
     setError(false);
 
-    axiosInstance = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
+    axios = axios.create ({baseURL: process.env.REACT_APP_API_URL }); 
 
 
     try {
 
       //handle if user not exists 
-      const res = await axiosInstance.post("/auth/register", {
+      const res = await axios.post("/auth/register", {
         username,
         email,
         password,
